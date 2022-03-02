@@ -10,7 +10,7 @@ const routes: Routes = [
         path: 'discover',
         children: [
           {path: '', loadChildren: () => import('./discover/discover.module').then(m => m.DiscoverPageModule)},
-          {path: 'placeId', loadChildren: () => import('./discover/place-detail/place-detail.module').then(m => m.PlaceDetailPageModule)}
+          {path: ':placeId', loadChildren: () => import('./discover/place-detail/place-detail.module').then(m => m.PlaceDetailPageModule)}
         ]
       },
       {
