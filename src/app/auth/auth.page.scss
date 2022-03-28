@@ -1,0 +1,48 @@
+ion-content>div {
+  margin-top: 15vh;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+.loginOptions {
+  text-align: center;
+}
+
+ion-list {
+  margin: 4vh;
+}
+
+.spinner {
+  margin-top: 4vh;
+}
+
+.loginButton {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  color: white;
+  border-radius: 50px;
+  padding: 1vh;
+  width: 4vh;
+  height: 4vh;
+  margin: 1vh;
+}
+
+.logo.apple {
+  background-color: black;
+}
+
+.logo.google {
+  background-color: rgb(219, 68, 55);
+}
+
+.logo.fb {
+  background-color: rgb(66, 103, 178);
+}
+

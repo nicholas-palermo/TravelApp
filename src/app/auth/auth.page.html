@@ -1,19 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Authenticate</ion-title>
+    <ion-title class="ion-text-center">{{ isLogin? 'Login' :'Signup'}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <ion-list>
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-  </ion-list>
-  <ion-button color="primary" (click)="onLogin()">Login</ion-button>
+<ion-content>
+  <div>
+    <h1>Welcome back!</h1>
+
+    <ion-list>
+      <ion-item>
+        <ion-input placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Password" ></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="loginButton">
+      <ion-button color="primary" (click)="onLogin()">Login</ion-button>
+    </div>
+
+    <div class="spinner ion-text-center">
+      <ion-spinner color="primary" *ngIf="isLoading"></ion-spinner>
+    </div>
+
+    <div class="loginOptions">
+      <p>Or connect using</p>
+      <div>
+        <div></div>
+        <ion-icon class="logo fb" name="logo-facebook" (click)="onLogin()"></ion-icon>
+        <ion-icon class="logo google" name="logo-google" (click)="onLogin()"></ion-icon>
+        <ion-icon class="logo apple" name="logo-apple" (click)="onLogin()"></ion-icon>
+      </div>
+      <p>Don't have an account? <span style="color: #3880ff;" class="signUpLink">Sign Up</span></p>
+    </div>
+  </div>
 </ion-content>
